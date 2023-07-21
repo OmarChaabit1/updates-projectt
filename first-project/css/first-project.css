@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root{
+
+
+    --blue:  #6571ff ;
+    --dark-color:rgb(38, 38, 194);
+    --black:#444;
+    --ligh-color:#666;
+    --border: .1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+}
+*
+{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear ;
+    transition: width  none ;
+    list-style: none ;
+
+}
+body{
+    background :#eff3f7 ;
+    background-size: cover ;
+    background-position:center ;
+    width:100%; 
+    
+
+
+}
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:5rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(--black) ;
+
+}
+/* login-form */
+.login-form-container{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.9);
+    position: fixed ;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container form {
+        background: #fff;
+        border: no;
+        width: 40rem ;
+        padding: 2rem ;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem ;
+        margin: 2rem ;
+
+}
+.login-form-container form h3 {
+    font-size: 2.5rem ;
+    text-transform: uppercase ;
+    color: var(--black );
+    text-align: center; 
+}
+.login-form-container form label {
+    display:  block ;
+    font-size: 1.5rem ;
+    padding-top: 1rem;
+}
+.login-form-container form .box {
+    width: 100%;
+    margin: .7rem 0 ;
+    font-size: 1.6rem ;
+    border-radius: .5rem ;
+    border: var(--border);
+    padding: 1rem 1.2rem ;
+    color: var(--black);
+    text-transform: none ;
+}
+.login-form-container form .checkbox {
+    display:  flex ;
+    align-items: center ;
+    gap: .5rem ;
+    padding: 1rem 0 ;
+}
+.login-form-container form .checkbox label {
+    font-size: 1.5rem ;
+    color: var(--light-color);
+    cursor: pointer;
+}
+.btn{
+     margin-top: 1rem ;
+     display:  inline-block ;
+     width: 100%;
+     height:4rem ;
+     border-radius:  .5rem ;
+     color:#fff;
+     background: var(--blue) ;
+     font-size: 1.7rem ;
+     cursor: pointer;
+     font-weight:500;
+     margin-bottom: 1rem ;
+}
+.btn:hover{
+    background: var(--dark-color);
+}
+.users{
+    display:grid ; 
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem ;
+}
+.users:hover{
+    opacity: 0.9 ;
+}
+.users #btn1{
+    background: #0ac074;
+}
+.users #btn2{
+    background: #f62947;
+}
+
+/*dashboard style */
+#dashboard_main_container{
+    display:  flex ;
+    flex-direction: row;    
+    
+}
+div.dashboard-sidebar{
+    width: 20% ;
+    background: #e4e4ee ;
+    color: black ;
+    height: 100vh;
+}
+div.dashboard-content-container{
+    width: 80% ;
+    
+}
+h3.dashboard-logo{
+    color: var(--blue);
+    font-size: 5rem ;
+    text-align: center ;
+}
+.dashboard-sidebar-user{
+text-align: center;
+padding: 5px ;
+border-bottom: 2px solid #fff ;
+}
+.dashboard-sidebar-user img { 
+    border-radius: 50% ;
+    width: 60px ;
+    display: inline-block;
+    border: 2px solid var(--black);
+    margin: .3rem ;
+    vertical-align: middle;
+}
+
+.dashboard-sidebar-user span { 
+    top: 50% ;
+   font-size: 18px ;
+   text-transform: uppercase;
+   color: var(--dark-color);
+   display: inline-block ;
+}
+
+/*.dashboard-sidebar-user h4{
+    
+    font-size: 20px ;
+    color: var(--dark-color);
+}*/
+ul.dashboard-menu-list {
+    margin-top: 20px ;
+}
+ul.dashboard-menu-list li.liMainMenu{
+    padding: 15px 0px ;
+    text-transform: uppercase;
+}
+
+ul.dashboard-menu-list li.liMainMenu a{
+    text-decoration:  none ;
+    color: var(--light-color) ;
+    display: block ;
+    font-size: 14px ;
+    padding: 0px 15px ;
+}
+ul.dashboard-menu-list li.liMainMenu a i {
+    font-size: 23px ;
+    width: 30px ;
+}
+ul.dashboard-menu-list li.menuActive{
+    
+    background: var(--blue);
+
+}
+ul.dashboard-menu-list li:hover{
+    background: var(--blue);
+    transition: .3s all;
+}
+div.dashboard-topNav{
+    background: #fff ;
+    padding: 28px ;
+}
+div.dashboard-topNav
+ a {
+    color:var(--black);
+    font-size: 18px ;
+    text-decoration: none ;
+}
+#logoutBtn{
+    float: right ;
+}
+div.dashboard-content{
+    padding : 50px 10px 10px 10px  ; 
+}
+div.dashboard-content-main{
+    background: #fff ;
+    min-height: 800px;
+    height: 100%;
+
+}
+
+/*error styling */
+div#error{
+    color: red ;
+    text-align: center ;
+    font-size: 20px ;
+    padding: 11px ;
+
+}
+
+
+/* add user css */
+
+
+.dashboard-content-main {
+  max-width: 100%;
+  margin: 0 0 2rem 0 ;
+  padding: 100px 40px;
+  background-color: #f2f2f2;
+}
+.dashboard-content-main form {
+    border: 1px solid #ccc ;
+    padding: 10rem 5rem   ;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10rem  ;
+  }
+  
+
+
+
+
+.dashboard-content-main .info-person {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.dashboard-content-main .info-person div {
+  flex-basis: 48%;
+    border-color: var(--blue);
+}
+
+
+.dashboard-content-main label {
+  font-weight: bold;
+  font-size: 2rem ;
+}
+
+
+.dashboard-content-main input {
+  width: 100%;
+  padding: 15px 20px  ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+
+.dashboard-content-main .buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dashboard-content-main .buttons button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #b1a9a9 ;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard-content-main .buttons button:first-child{
+    background: var(--blue);
+}
+
+.dashboard-content-main .buttons button i {
+  margin-right: 5px;
+}
+
+
+p.responseMessage{
+    color: white;
+    text-align: center;
+    font-size: 1.7rem ;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1.3rem ;
+}
+p.responseMessage__error{
+    background: red ;
+}
+
+p.responseMessage__success{
+    background: #0ac074;
+}
+
+/* user -add n°2 
+.row {
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    gap: 14rem;
+    width: 100%;
+}
+*/ 
+.column{
+    width: 100% ; 
+ 
+}
+h1.section-header{
+    position: relative;
+    bottom: 150px;
+    right: 35px ; 
+    font-size: 21px ;
+    color:var(--blue);
+    padding: 10px ;
+    padding-bottom: 11px;
+    border-left: 4px solid var(--dark-color);
+}
+h1.section-header i{
+    margin-right: 10px ;
+}
+
+/*table userrs */
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 80px;
+    left: 50px ; 
+
+}
+  
+.users table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+  
+.users th,
+.users td {
+    padding:  12px 20px;
+    border-radius: 5px ;
+    text-align: center ;
+    border-bottom: 1px solid #ddd;
+}
+  
+
+.users thead th {
+    background-color: #f9f9f9;
+}
+  
+.users tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+.users tbody tr:hover {
+    background-color: #e6e6e6;
+}
+  
+.users th {
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.users td {
+    color: #555;
+}
+  
+.users .action-button {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+  
+.users .action-button:hover {
+    background-color: #45a049;
+}
+  
+.userCount{
+    position: absolute;
+    bottom:-35px;
+    font-size: 1.4rem ;
+    text-align: left ;
+    font-weight: 600 ;
+    color: var(--blue);
+    text-transform: uppercase ;
+    padding-left: 10px ;
+}
+
+/*submenu (" add users ")*/
+.subMenuLinks{
+    padding-left: 25px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    text-transform: none ;
+    font-size: 15px !important;
+
+}
+.subMenuLinks i{
+    font-size: 10px !important ;
+    width: 16px !important;
+}
+
+.subMenus{
+    display:  none ;
+    background: #a3abff ;
+}
+
+.icon_right{
+    float: right ;
+    font-size: 19px !important;
+    margin-top: 0.5rem ;
+    margin-left: 10px;
+}
+.subMenuActive{
+    font-weight: bold; 
+    background: var(--blue) ;
+}
+  /* View Products */
+
+  .productImages{
+    width: 100px ;
+    height: 100px ;
+  }
